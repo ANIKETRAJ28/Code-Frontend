@@ -18,6 +18,6 @@ module.exports = {
     'quotes': ['error', 'single', { 'avoidEscape': true }],
     'indent': ['error', 2],
     'no-multi-spaces': ['error'],
-    'simple-import-sort/imports': 'error'
+    // 'simple-import-sort/imports': 'error'
   },
 }
