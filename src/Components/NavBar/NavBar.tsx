@@ -2,7 +2,7 @@ import SideBar from 'Components/SideBar/SideBar';
 
 export default function NavBar() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 border-b-2 border-neutral">
       <label htmlFor="my-drawer">
         <div role="button" className="btn btn-ghost btn-circle">
           <svg

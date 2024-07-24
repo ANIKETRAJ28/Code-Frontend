@@ -2,6 +2,9 @@ import DOMPurify from 'dompurify';
 import { useState } from 'react';
 import AceEditor from 'react-ace';
 import ReactMarkdown from 'react-markdown';
+import { MdOutlineDescription } from 'react-icons/md';
+import { BsBook } from 'react-icons/bs';
+import { PiClockCounterClockwiseFill } from 'react-icons/pi';
 
 import 'ace-builds/src-noconflict/theme-monokai';
 import 'ace-builds/src-noconflict/ace';
@@ -44,10 +47,19 @@ export default function ProblemDescription({description}) {
       onMouseUp={stopDragging}
     >
       <div className="left-panel h-full overflow-auto" style={{width: `${leftWidth}%`}}>
-        <div className="tabs">
-          <button onClick={() => setActiveTab('Description')}>Desccription</button>
-          <button onClick={() => setActiveTab('Editorial')}>Editorial</button>
-          <button onClick={() => setActiveTab('Sublitions')}>Submition</button>
+        <div className="tabs flex gap-4 bg-base-300 py-1">
+          <button className='flex items-center gap-1 p-2 rounded-md hover:bg-neutral text-lg' onClick={() => setActiveTab('Description')}>
+            <MdOutlineDescription />
+            Description
+          </button>
+          <button className='flex items-center gap-1 p-2 rounded-md hover:bg-neutral text-lg' onClick={() => setActiveTab('Editorial')}>
+            <BsBook />
+            Editorial
+          </button>
+          <button className='flex items-center gap-1 p-2 rounded-md hover:bg-neutral text-lg' onClick={() => setActiveTab('Sublitions')}>
+            <PiClockCounterClockwiseFill />
+            Submition
+          </button>
         </div>
         <div className="markdown-viewer basis-1/2">
           <ReactMarkdown>
