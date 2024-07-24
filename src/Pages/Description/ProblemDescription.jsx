@@ -23,7 +23,7 @@ export default function ProblemDescription({description}) {
     e.preventDefault();
   };
 
-  const stopDragging = (e) => {
+  const stopDragging = () => {
     if(isDragging) {
       setIsDragging(false);
     }
@@ -61,11 +61,11 @@ export default function ProblemDescription({description}) {
       ></div>
       <div className="right-panel h-full overflow-auto" style={{width: `${100-leftWidth}%`}}>
         <AceEditor
-          mode='javascript'
+          mode='cpp'
           theme='monokai'
           name='codeEditor'
           className='editor'
-          style={{ width: '100%'}}
+          style={{ width: '100%', height: '100%'}}
           setOptions={{
             enableBasicAutocompletion: true,
             enableLiveAutocompletion: true,
