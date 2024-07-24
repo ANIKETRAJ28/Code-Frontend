@@ -13,6 +13,7 @@ import 'ace-builds/src-noconflict/mode-c_cpp';
 import 'ace-builds/src-noconflict/mode-java';
 import 'ace-builds/src-noconflict/mode-python';
 import 'ace-builds/src-noconflict/ext-language_tools';
+import rehypeRaw from 'rehype-raw';
 
 export default function ProblemDescription({description}) {
 
@@ -62,7 +63,7 @@ export default function ProblemDescription({description}) {
           </button>
         </div>
         <div className="markdown-viewer basis-1/2">
-          <ReactMarkdown>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
             {sanitizedMarkdown}
           </ReactMarkdown>
         </div>
